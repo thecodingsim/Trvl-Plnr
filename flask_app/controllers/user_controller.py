@@ -66,3 +66,5 @@ def logout():
     #session.clear()
     return redirect("/")
 
+# ================PROFILE=====================
+# insert profile routes here

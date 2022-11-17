@@ -46,6 +46,11 @@ html, body {
    padding-bottom: 1rem;
 }
 
+.carousel-caption a {
+  text-decoration: none;
+  color: white;
+}
+
 .btn-primary {
   background-color: rgb(187, 159, 146);
   border: 1px solid rgb(201, 174, 161);
@@ -298,3 +303,15 @@ class="img-fluid" */
 
 
 
+/* ==================PROFILE=============== */
+.card-header:first-child {
+  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+.card-header {
+  position: relative;
+  padding: 2rem 2rem;
+  border-bottom: none;
+  background-color: white;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+  z-index: 2;
+}
