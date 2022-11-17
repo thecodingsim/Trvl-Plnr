@@ -7,6 +7,13 @@ from flask_app.models.user_model import User
 from flask_app.models.forum_model import Forum
 bcrypt = Bcrypt(app)
 
+
+# ===============MAIN PAGES=====================
+# landing page
+@app.route('/index')
+def index():
+    return render_template("index.html")
+
 # main homepage, login and registration
 @app.route('/')
 def main():

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v6.2.1/js/all.js"></script>
+	<!-- end new -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+	<link href="../static/css/styles.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+	<!-- Navigation -->
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="/forum">The Trvl Plnr.</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-bs-target="#navbarResponsive">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse text-bg-dark" tabindex="-1" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto active">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href=".testimonials">Testimonials</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">The Trvlrs.</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Connect</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							Guides
+						</a>
+						<ul class="dropdown-menu dropdown-menu-dark">
+							<li><a class="dropdown-item" href="https://developer.chrome.com/docs/devtools/">Chrome
+									DevTools</a></li>
+							<li>
+								<hr class="dropdown-divider">
+							</li>
+							<li><a class="dropdown-item" href="https://developer.mozilla.org/en-US/">MDN</a></li>
+							<li><a class="dropdown-item" href="https://getbootstrap.com/" dropdown-item">Bootstrap</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<a href="/" class="btn btn-outline-light">Register</a>
+			</div>
+		</div>
+		</div>
+	</nav>
+
+	<!--- Image Slider -->
+	<div id="slides" class="carousel slide" data-ride="carousel">
+		<ul class="carousel-indicators">
+			<li data-target="#slides" data-slide-to="0" class="active"></li>
+			<li data-target="#slides" data-slide-to="1"></li>
+			<li data-target="#slides" data-slide-to="2"></li>
+		</ul>
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="https://source.unsplash.com/1600x900/?travel" alt="" />
+				<div class="carousel-caption">
+					<h1 class="display-2">Trvl Plnr.</h1>
+					<h3>Stage Manager for traveling</h3>
+					<button type="button" class="btn btn-outline-light btn-lg" href="/forum">View Forums</button>
+					<button type="button" class="btn btn-dark btn-lg" href="/">Get Started</button>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="https://source.unsplash.com/1600x900/?landscape" alt="" />
+				<div class="carousel-caption">
+					<h1 class="display-2">Trvl Plnr.</h1>
+					<h3>Stage Manager for traveling</h3>
+					<button type="button" class="btn btn-outline-light btn-lg" href="/forum">View Forums</button>
+					<button type="button" class="btn btn-dark btn-lg" href="/">Get Started</button>
+				</div>
+			</div>
+			<div class="carousel-item">
+				<img src="https://source.unsplash.com/1600x900/?tourist" alt="" />
+				<div class="carousel-caption">
+					<h1 class="display-2">Trvl Plnr.</h1>
+					<h3>Stage Manager for traveling</h3>
+					<button type="button" class="btn btn-outline-light btn-lg" href="/forum">View Forums</button>
+					<button href="/" type="button" class="btn btn-dark btn-lg">Get Started</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<!--- Welcome Section -->
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<h1 class="display-4">Exploring never felt easier.</h1>
+				<hr>
+				<p class="lead">Trvl Plnr. is a free service and traveling community built to ease your stress from
+					planning your next destination.</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!--- Three Column Section -->
+	<div class="container-fluid padding">
+		<div class="row text-center padding">
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<i class="fa-regular fa-sun"></i>
+				<h3>Weather</h3>
+				<p>Access to live & latest forecasts.</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4">
+				<i class="fa-solid fa-mountain-city"></i>
+				<h3>Travel Assistant</h3>
+				<p>The website for virtual 'All-in-one' travel guides for stays, food/activities, transportation & more.
+				</p>
+			</div>
+			<div class="col-sm-12 col-md-4">
+				<i class="fa-solid fa-location-dot"></i>
+				<h3>Maps</h3>
+				<p>Google maps to help with increasing productivity for planning: time & distance between destinations.
+				</p>
+			</div>
+
+		</div>
+		<hr class="my-4">
+	</div>
+
+	<!--- Two Column Section -->
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="col-lg-6 testimonials">
+				<h2 class="text-center">Hear what trvlrs have to say about us:</h2>
+				<p>"Being a mom of 6 and a full time registered nurse, I rarely have time to search and plan for
+					traveling. This service helps cut the time and costs in half!"</p>
+				<p>
+				<h6><em>-Jackie, 35, South Carolina</em></h6>
+				</p>
+				<button class="btn btn-primary" href="#">See more testimonials</button>
+			</div>
+			<div class="col-lg-6">
+				<img src="https://source.unsplash.com/1600x900/?family" alt="pictures of families" class="img-fluid">
+			</div>
+		</div>
+	</div>
+	<hr class="my-4">
+	<!--- Fixed background -->
+	<figure>
+		<div class="col-12 text-center text-uppercase mt-5">
+			<h1 class="text-dark pb-3">
+				The PLNRS.
+			</h1>
+			<h6 class="text-dark pb-3">
+				Community
+			</h6>
+			<h4 class="text-dark pb-3">
+				Inspire | Create | Impact
+			</h4>
+
+		</div>
+		<div class="fixed-wrap">
+			<div id="fixed">
+			</div>
+		</div>
+	</figure>
+
+
+	<!--- COMMUNITY -->
+	<div class="container-fluid padding">
+		<div class="row welcome text-center">
+			<div class="col-12">
+				<!-- <h1 class="display-4">The Plnrs.</h1> -->
+			</div>
+		</div>
+	</div>
+
+	<!--- Cards -->
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://source.unsplash.com/1600x900/?business" alt="pfp of team member"
+						class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Joanne Wenceslao</h4>
+						<p class="card-text">Joanne is a software developer from California, US who enjoys traveling
+							on
+							her free time....</p>
+						<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://source.unsplash.com/1600x900/?professional" alt="pfp of team member"
+						class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Skylar Nova</h4>
+						<p class="card-text">Skylar is a finance professional from Singapore who enjoys traveling to
+							different countries and trying new dishes!...</p>
+						<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://source.unsplash.com/1600x900/?softwareengineer" alt="pfp of team member"
+						class="card-img-top">
+					<div class="card-body">
+						<h4 class="card-title">Drew Pierson</h4>
+						<p class="card-text">Drew is a traveling nomad & entrepreneur who enjoys transitions to
+							different locations
+							every month....</p>
+						<a href="#" class="btn btn-outline-secondary">See Profile</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--- Cruise Section (COLLAPSABLE SECTION) -->
+	<button class="cruise-section" data-toggle="collapse" data-target="#cruise"> Cruise Planning COMING SOON! (click
+		me
+		for more information)</button>
+	<div id="cruise" class="collapse">
+		<div class="container-fluid padding">
+			<div class="row text-center">
+				<div class="col-12">
+					<p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio vero eius
+						fugit reprehenderit dolor quis aut suscipit culpa maiores! Aliquam cum eum quasi ea adipisci
+						recusandae ipsa, quia dolorum iste.</p>
+					<img src="https://c.tenor.com/kSXvkOgn91wAAAAC/costa-crociere-costa-cruises.gif" alt="gif"
+						class="gif img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--- Two Column Section -->
+	<div class="container-fluid padding">
+		<div class="row padding">
+			<div class="col-lg-6">
+
+				<img src="https://source.unsplash.com/1600x900/?friends" alt="planning" class="img-fluid">
+			</div>
+			<div class="col-lg-6 friends-section">
+				<h2>Gather in one app.</h2>
+				<img src="https://acegif.com/wp-content/uploads/gifs/handshake-47.gif" alt="gif" class="gif2">
+				<p>Build a community, make friends, and find a travel buddy!</p>
+			</div>
+		</div>
+	</div>
+
+
+	<!--- Connect -->
+	<div class="container-fluid padding">
+		<div class="row text-center padding">
+			<div class="col-12">
+				<h2>Connect to get featured!</h2>
+				<div class="col-12 guide padding">
+					<p>[new posts will be displayed here]</p>
+				</div>
+			</div>
+		</div>
+
+		<!--- Footer -->
+		<footer class="container-fluid padding bg-dark">
+			<div class="row text-center">
+				<div class="col-md-4">
+					<h1>Trvl Plnr.</h1>
+					<hr class="light">
+					<p>thecodingsim@gmail.com</p>
+					<p>1800 a really cool place</p>
+					<p>CA, US, 0000</p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Quick links</h5>
+					<hr class="light">
+					<p><a href="#">Guides</a></p>
+					<p><a href="#">Trvler Spotlight</a></p>
+					<p><a href="#">Connect</a></p>
+					<p><a href="#">Upcoming Events</a></p>
+				</div>
+				<div class="col-md-4">
+					<hr class="light">
+					<h5>Places to go:</h5>
+					<hr class="light">
+					<p><a href="#">Paris</a></p>
+					<p><a href="#">Iceland</a></p>
+					<p><a href="#">United States</a></p>
+					<p><a href="#">Asia</a></p>
+					<p><a href="#">See more..</a></p>
+				</div>
+			</div>
+		</footer>
+		<!-- end of footer -->
+		<footer class="small bg-dark text-white">
+			<div class="container py-4">
+				<ul class="list-inline mb-0 text-center">
+					<li class="list-inline-item">&copy; 2022 Trvl Plnr., Inc.</li>
+					<li class="list-inline-item">All rights reserved.</li>
+					<li class="list-inline-item"><a href="#">Terms of use and privacy policy</a>.</li>
+				</ul>
+			</div>
+		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+			crossorigin="anonymous"></script>
+</body>
+
+</html>
