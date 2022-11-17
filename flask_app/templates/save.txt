@@ -1,0 +1,35 @@
+  recipes.html
+  
+  <!-- ===================WELCOME SECTION=================== -->
+<h1>Welcome back, {{logged_user.first_name}}</h1>
+
+    <!-- ===================END OF WELCOME SECTION=================== -->
+
+
+
+         <!-- <td>
+                    <a href="/recipes/{{user.id}}">view recipe</a> | <a href="/recipes/edit/{{user.id}}">edit</a> |
+                    <a href="/recipes/delete/{{user.id}}">delete</a> |
+                </td> -->
+
+
+
+NEED TO FIX:
+1.) duplication of recipes  
+    --->fixed: line 56 in recipe_model, you need this_recipe = cls(row)
+2.) validation for new recipe not working
+3.) under thirty minutes not rendering true or false
+    ---> fixed: because of this_recipe = cls(row)
+4.) not seeing data in edit.html page?
+    --->double check your query in get_by_id and see if you added a semi colon twice or in the wrong place, or not at all
+5.) method not allowed
+    ---> check if you are passing in the id or data in the function parameter
+6.) werkzeug.exceptions.BadRequestKeyError: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+KeyError: 'instruction'
+    ---> found that in my recipes_edit.html : value="{{recipe.instructions}}" had an 's' which I corrected to: value="{{recipe.instruction}}"
+
+7.) validator not working in edit page
+
+8.) you can not edit this does not work
+
+9.) update does not work

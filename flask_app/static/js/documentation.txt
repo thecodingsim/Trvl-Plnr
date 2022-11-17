@@ -1,0 +1,42 @@
+========================= openweathermap ==============================
+
+API: https://openweathermap.org/  (using current weather data)
+
+to create your own apiKey, create an account with openweathermap and go to dropdown under your username
+
+https://api.openweathermap.org/data/2.5/weather?q=California&units=imperial&appid=b468e87c8d11bd446b35a797aec0deb1
+
+put this in browser to change the data/results^
+
+**you may have to wait 30 mins to an hour to recieve results
+results:
+
+{"coord":{"lon":-76.5074,"lat":38.3004},"weather":[{"id":800,"main":"Clear","description":"clear sky","icon":"01n"}],"base":"stations","main":{"temp":36.23,"feels_like":36.23,"temp_min":31.68,"temp_max":45.64,"pressure":1033,"humidity":87},"visibility":10000,"wind":{"speed":0,"deg":0},"clouds":{"all":0},"dt":1668506266,"sys":{"type":2,"id":2011802,"country":"US","sunrise":1668512850,"sunset":1668549240},"timezone":-18000,"id":4350049,"name":"California","cod":200}
+
+
+////////////// OBJECT DEFINITIONS /////////////////////
+
+look at: "Fields in API response"
+https://openweathermap.org/current
+
+units of measurement: 
+-For temperature in Fahrenheit use units=imperial
+-For temperature in Celsius use units=metric
+
+======================== understanding js ================================
+
+documentquerySelector() : this function will
+
+
+
+
+======================== REACT ================================
+*make sure you download node.js application
+* to generate an empty react application inside of your folder --run:
+npx create-react-app ./
+
+1.) create a component folder in the src folder. Then create folders under src to separate our components:
+-Header
+-List
+-Map
+-PlaceDetails

@@ -1,0 +1,101 @@
+/* ===============WEATHER CARD=============== */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    /* API from unsplash to generate random nature photos for weather */
+    background-image: url('https://source.unsplash.com/1600x900/?landscape');
+    /* this setting will make sure to not repeat and stretch to page */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background vignette with gradient */
+    box-shadow: inset 0 0 8em 2em #000;
+}
+
+.card {
+    background: rgba(64, 63, 63, 0.823);
+    color:white;
+    font-family: 'Open Sans', sans-serif;
+    /*===SIZE=== */
+    width: 100%;
+        /* we still want to create a max width so that it will only take up the space dependent on the size of the screen  */
+    max-width: 450px;
+        /* makes the card responsive to mobile sites */
+    margin: 1em;
+    padding: 50px;
+    /*===ROUNDED BORDER=== */
+    border-radius: 30px;
+    border: none;
+    /*===POSITIONING=== */
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+input.search-bar {
+    width: calc(100% - 30px);
+    max-height: 30px;
+    /* rounded corners, you want it half of the height */
+    border-radius: 18px;
+    border: none;
+    /* padding to give it the same size as the button */
+    padding: 0.5em 1em;
+    /* colors */
+    background: rgba(131, 131, 131, 0.389);
+    color: white;
+    /* inherit the imported font, this will get it from the parent */
+    font-family: inherit;
+    font-size: 100%;
+}
+
+button {
+    margin: 0.5em;
+    border-radius: 50%;
+    border: none;
+    /* make this the same size as the search bar */
+    height: 2em;
+    width: 2em;
+        /* button hover effects */
+    opacity: 0.6;
+    transition: 0.3s;
+    /* color */
+    background: rgba(221, 221, 221, 0.389);
+    color: white;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+/* hide dummy text, until page loads */
+.weather.loading {
+    visibility: hidden;
+    /* will shorten the height of the card while the page loads */
+    max-height: 20px;
+    position: relative;
+}
+
+/* make a psuedo element to load after */
+
+.weather.loading:after {
+    visibility: visible;
+    content: "Loading...";
+    color: white;
+    position: absolute;
+    /* to keep the content within the card */
+    top: 0;
+    margin-top: 20px;
+    left: 20px;
+}
