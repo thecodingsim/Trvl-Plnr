@@ -297,21 +297,3 @@ Extra (xl) large devices (large desktops, 1200px and up)
 
 /* on imgs: 
 class="img-fluid" */
-
-
-
-
-
-
-/* ==================PROFILE=============== */
-.card-header:first-child {
-  border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
-}
-.card-header {
-  position: relative;
-  padding: 2rem 2rem;
-  border-bottom: none;
-  background-color: white;
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
-  z-index: 2;
-}

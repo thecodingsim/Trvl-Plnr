@@ -68,3 +68,17 @@ def logout():
 
 # ================PROFILE=====================
 # insert profile routes here
+
+# @app.route('/users/profile/<int:id>')
+# def profile():
+#     if 'user_id' not in session:
+#         return('/')
+#     data = {
+#         'id': session['user_id']
+#     }
+#     logged_user = User.get_by_id(data)
+#     return render_template("profile.html", logged_user = logged_user)
+
+@app.route('/users/profile')
+def profile():
+    return render_template('profile.html')

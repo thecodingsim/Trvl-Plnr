@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="../static/css/styles.css" rel="stylesheet">
     <title>Post</title>
     <style>
         * {
@@ -16,19 +17,28 @@
 
         h1 {
             text-align: center;
-            margin-top: 100px;
-            margin-bottom: 80px;
+            margin-bottom: 20px;
             font-size: 80px;
         }
 
         .links {
             text-align: end;
             margin-right: 20px;
+            margin-top: 1.5rem;
+        }
+
+        .links .btn a {
+            color: #fff;
+            text-decoration: none;
         }
 
         body {
             max-width: 1000px;
             margin: auto;
+        }
+
+        html {
+            background-color: rgba(227, 221, 221, 0.654);
         }
     </style>
 </head>
@@ -84,25 +94,33 @@
 
 <body>
     <!-- ===================FORUM card SECTION=================== -->
-    <h1>{{this_post.name}}</h1>
-    <div class="links">
-        <a href="/forum">back to forum</a> |
-        <a href="/users/logout">logout</a>
-    </div>
+    <div class="card" style="width: 100%;">
+        <img class="card-img-top" style="opacity: .7;" src="https://source.unsplash.com/1600x900/?white"
+            alt="Card image">
+        <div class="links">
+            <button class="btn btn-dark"><a href="/forum">Back to The Forum</a></button>
+            <button class="btn btn-dark"><a href="/users/logout">Logout</a></button>
+        </div>
 
-    <!-- start of main section -->
-    <div class="main-section">
+        <!-- start of main section -->
+        <div class="main-section">
 
-        <!-- Description text area -->
-
-        <div class="labels">
-            <h2>Location: {{this_post.location}}</h2>
-            <h5>Description:</h5>
-            <p>{{this_post.description}}</p>
-            <h5>Posted By:</h5>
-            <p>{{this_post.owner.first_name}} {{this_post.owner.last_name}}</p>
+            <!-- Description text area -->
+            <div class="card-body" style="padding: 60px;">
+                <div class="labels">
+                    <p class="card-text">
+                    <h1>{{this_post.name}}</h1>
+                    <hr class="light">
+                    <h3 class="text-center">📍 {{this_post.location}} | ✈️ Trvlr: {{this_post.owner.first_name}}
+                        {{this_post.owner.last_name}}</h3>
+                    <h5>Description:</h5>
+                    <p>{{this_post.description}}</p>
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
+
     <!-- end of description text area -->
 
     <!-- end of main section -->

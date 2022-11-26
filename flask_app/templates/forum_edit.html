@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="../static/css/styles.css" rel="stylesheet">
     <title>Edit Post</title>
     <style>
         * {
@@ -41,7 +42,11 @@
 
         .links {
             text-align: end;
-            margin-right: 20px;
+        }
+
+        .links .btn a {
+            color: #fff;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -98,11 +103,17 @@
 <body>
     <!-- ==================POST add SECTION=================== -->
     <div class="headers">
-        <h1>Editing: {{this_post.name}}</h1>
+        <div class="card"
+            style="padding: 1rem; color:#fff; text-shadow: 1px 1px black; background-color:rgba(51, 49, 49, 0.499); box-shadow: 1px 1px #cdcdcd;">
+            <h1>Editing: {{this_post.name}}</h1>
+        </div>
         <div class="links">
-            <h5>Welcome {{logged_user.first_name}} {{logged_user.last_name}},</h5>
-            <a href="/forum">back to all posts</a> |
-            <a href="/users/logout">logout</a>
+            <h5 style="padding-top: 1rem;">Welcome {{logged_user.first_name}} {{logged_user.last_name}},</h5>
+            <div class="links">
+                <button class="btn btn-dark"><a href="/forum">Back to The Forum</a></button>
+                <button class="btn btn-dark"><a href="/users/logout">Logout</a></button>
+            </div>
+            <hr class="light">
         </div>
         {% with messages = get_flashed_messages() %}
         <!-- declare a variable called messages -->

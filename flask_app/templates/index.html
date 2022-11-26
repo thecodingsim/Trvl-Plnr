@@ -16,6 +16,17 @@
 	<link href="../static/css/styles.css" rel="stylesheet">
 	<link href="style.css" rel="stylesheet">
 
+	<style>
+		.weather a {
+			text-decoration: none;
+			color: #222;
+		}
+
+		.weather a:hover {
+			color: white;
+		}
+	</style>
+
 </head>
 
 <body>
@@ -30,7 +41,7 @@
 			<div class="collapse navbar-collapse text-bg-dark" tabindex="-1" id="navbarResponsive">
 				<ul class="navbar-nav ml-auto active">
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Home</a>
+						<a class="nav-link active" aria-current="page" href="/index">Home</a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#aboutme">About</a>
@@ -114,6 +125,9 @@
 				<hr>
 				<p class="lead">Trvl Plnr. is a free service and traveling community built to ease your stress from
 					planning your next destination.</p>
+				<p> Our mission: Help people and companies to travel smart, exceeding expectations and creating
+					powerful memories
+					for a lifetime through community building. </p>
 			</div>
 		</div>
 	</div>
@@ -122,10 +136,11 @@
 	<!--- Three Column Section -->
 	<div class="container-fluid padding">
 		<div class="row text-center padding">
-			<div class="col-xs-12 col-sm-6 col-md-4">
+			<div class="col-xs-12 col-sm-6 col-md-4 weather">
 				<i class="fa-regular fa-sun"></i>
 				<h3>Weather</h3>
 				<p>Access to live & latest forecasts.</p>
+				<button type="button" class="btn btn-outline-dark btn-sm"><a href="/weather">Try it out</a></button>
 			</div>
 			<div class="col-xs-12 col-sm-6 col-md-4">
 				<i class="fa-solid fa-mountain-city"></i>
@@ -204,7 +219,7 @@
 						<p class="card-text">Joanne is a software developer from California, US who enjoys traveling
 							on
 							her free time....</p>
-						<a href="#" class="btn btn-outline-secondary">See Profile</a>
+						<a href="/users/profile" class="btn btn-outline-secondary">See Profile</a>
 					</div>
 				</div>
 			</div>
@@ -321,6 +336,7 @@
 					<li class="list-inline-item">&copy; 2022 Trvl Plnr., Inc.</li>
 					<li class="list-inline-item">All rights reserved.</li>
 					<li class="list-inline-item"><a href="#">Terms of use and privacy policy</a>.</li>
+					<li class="list-inline-item">Coded by: Joanne Wenceslao</li>
 				</ul>
 			</div>
 		</footer>

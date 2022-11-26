@@ -12,9 +12,13 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
     <!-- end new -->
+    <!-- data table css -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css"></script>
+    <script src="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css"></script>
+    <!-- end data table css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link href="styles.css" rel="stylesheet">
+    <link href="../static/css/styles.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
     <title>The Trvl Plnr. Forum</title>
     <style>
@@ -23,9 +27,26 @@
             padding: 0;
         }
 
-        .links {
-            text-align: end;
-            margin-right: 20px;
+        body {
+            background: url("https://source.unsplash.com/1600x900/?white") no-repeat;
+            background-size: cover;
+        }
+
+        .links .btn a {
+            color: #fff;
+        }
+
+        .links .btn {
+            margin-bottom: 1.2rem;
+            float: right;
+        }
+
+        .links a {
+            text-decoration: none;
+        }
+
+        .links a:hover {
+            transition: 0.7s;
         }
 
         /* this will center your entire website */
@@ -35,13 +56,30 @@
             margin-top: 80px;
         }
 
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: .3rem;
+        }
+
         h1 {
             text-align: center;
             margin-top: 100px;
             margin-bottom: 80px;
             font-size: 50px;
-            background-color: rgba(16, 15, 15, 0.386);
+            background-color: rgba(16, 15, 15, 0.808);
+            color: #fff;
             padding: 20px;
+        }
+
+        .table-name {
+            text-decoration: none;
+            color: #1e1d1d;
+        }
+
+        .table-name:hover {
+            color: #1e1d1d3e;
+            text-decoration: none;
         }
 
         table {
@@ -118,59 +156,72 @@
 <!-- END OF NAVIGATION BAR -->
 
 <body>
-    <!-- ===================WELCOME SECTION=================== -->
     <h1>Welcome {{logged_user.first_name}} {{logged_user.last_name}},</h1>
-    <h2>All Posts</h2>
-    <h6> A place to talk about your adventures, suggest new places, or share your travel itinerary.</h6>
-    <div class="links">
-        <a href="/forum/new">+ Add a post</a> |
-        <a href="/users/logout">Log out</a>
-    </div>
-    <div class="table">
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Location</th>
-                <th>Posted By</th>
-                <th>Created at</th>
-                <th>Updated at</th>
-                <th>Actions</th>
-            </tr>
+    <div class="container">
+        <!-- ===================WELCOME SECTION=================== -->
+        <div class="links row-lg-12">
+            <button class="btn btn-dark"><a href="/forum/new">Add a post </a></button>
+        </div>
+        <div class="table">
+            <table class="table table-striped" style="width:100%">
+                <thead>
 
-            {% for posts in all_posts %}
-            <tr>
-                <td>{{posts.name}}</td>
-                <td>{{posts.location}}</td>
-                <td>{{posts.owner.first_name}} {{posts.owner.last_name}}</td>
-                <td>{{posts.created_at}}</td>
-                <td>{{posts.updated_at}}</td>
-                <td>
-                    <a href="/forum/{{posts.id}}">view </a>|
-                    <!-- this will not allow other users to change edit page -->
-                    {% if posts.user_id == session['user_id'] %}
-                    <a href="/forum/edit/{{posts.id}}">edit </a>|
-                    <a href="/forum/{{posts.id}}/delete">delete</a>
-                    {% endif %}
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
+                    <h2>All Posts</h2>
+                    <hr class="light">
+                    <h6> A place to talk about your adventures, suggest new places, or share your travel itinerary.
+                    </h6>
+
+                </thead>
+
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Location</th>
+                        <th>Trvlr.</th>
+                        <th>Created at</th>
+                        <th>Updated at</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {% for posts in all_posts %}
+                    <tr>
+                        <td><a class="table-name" href="/forum/{{posts.id}}">{{posts.name}}</a></td>
+                        <td>{{posts.location}}</td>
+                        <td>{{posts.owner.first_name}} {{posts.owner.last_name}}</td>
+                        <td>{{posts.created_at}}</td>
+                        <td>{{posts.updated_at}}</td>
+                        <td>
+                            <!-- <a href="/forum/{{posts.id}}">view </a>| -->
+                            <!-- this will not allow other users to change edit page -->
+                            {% if posts.user_id == session['user_id'] %}
+                            <a href="/forum/edit/{{posts.id}}">edit </a>|
+                            <a href="/forum/{{posts.id}}/delete">delete</a>
+                            {% endif %}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <!-- ====================FOOTER==================== -->
+
 
     <!-- ===================END OF WELCOME SECTION=================== -->
-    <footer class="small bg-dark text-white">
-        <div class="container py-4">
-            <ul class="list-inline mb-0 text-center">
-                <li class="list-inline-item">&copy; 2022 Trvl Plnr., Inc.</li>
-                <li class="list-inline-item">All rights reserved.</li>
-                <li class="list-inline-item"><a href="#">Terms of use and privacy policy</a>.</li>
-            </ul>
-        </div>
-    </footer>
     <!-- javascript -->
+    <!-- data table js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../static/js/datatable.js"></script>
+    <!-- end data table js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
 </body>
+
 
 </html>
