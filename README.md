@@ -18,3 +18,13 @@ https://www.loom.com/share/dad5e3bb52ce4d09a57b03c7f215f77c
 * Bootstrap
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+## Security
+  <p align="center"> Secure Login Experience. Provides users with a secure and smooth login experience. The login process is designed with clear validation messages and error handling. Passwords are encrypted using bcrypt, which properly hashes and ensures that user data remains secure. This application also feautures a CRUD application where each user is unable to delete or edit each other's posts, adding an extra layer of security and convenience for users.
+    </p>
+    
+* JavaScript
+* Material UI
+* Bootstrap
+
+<p align="right">(<a href="#top">back to top</a>)</p>
