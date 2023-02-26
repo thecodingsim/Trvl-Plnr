@@ -2,7 +2,7 @@
 <div align="center">
 https://www.loom.com/share/dad5e3bb52ce4d09a57b03c7f215f77c
 
-<h3 align="center">Trvl Plnr.</h3>
+<h3 align="center">The Application</h3>
 
   <p align="center">
   A full-stack traveling stage manager application that makes exploring and making itineraries easier. Trvl Plnr is designed to help anyone plan and organize their travel schedules to maximize their experience. The application provides a user-friendly interface that allows to create, share, manage travel itineraries, as well as keep track of weather in real time. 
