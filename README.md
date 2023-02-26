@@ -12,7 +12,12 @@ https://www.loom.com/share/dad5e3bb52ce4d09a57b03c7f215f77c
 ## Foundations
   <p align="center"> The application is built using the Python programming language and utilizes the flask web framework. It also incorporates various other open-source libraries and tools, such as MySQL for database management and Bootstrap for front-end styling. The code is well-organized and follows best practices in software development, making it easy for other developers to contribute to the project.
     </p>
-    
+
+* CSS
+* Python
+* Flask
+* React
+* API
 * JavaScript
 * Material UI
 * Bootstrap
